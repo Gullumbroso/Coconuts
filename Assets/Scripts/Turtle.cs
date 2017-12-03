@@ -8,7 +8,7 @@ public class Turtle : MonoBehaviour {
 	float MIN_ANGLE = -50.0f;
 	float MOVEMENT_OFFSET_DIV = -450f;
 	float MONKEY_ANGLE_OFFSET_DIV = 50f;
-	float MONKEY_HEIGHT = 0.9f;
+	float MONKEY_HEIGHT = 0.33f;
 
 	private float rotation = 0f;
 	public GameObject monkey;
@@ -29,10 +29,10 @@ public class Turtle : MonoBehaviour {
 	void getInput() {
 
 		if (Input.GetKey (KeyCode.A) && rotation < MAX_ANGLE) {
-			rotation += 5f;
+			rotation += 2.5f;
 		}
 		if (Input.GetKey (KeyCode.D) && rotation > MIN_ANGLE) {
-			rotation -= 5f;
+			rotation -= 2.5f;
 		}
 
 		float monkeyAngle = monkey.transform.rotation.eulerAngles.z;

@@ -6,7 +6,7 @@ public class Monkey : MonoBehaviour {
 
 	private float MAX_POS = 3.0f;
 	private float MIN_POS = -3.0f;
-	private float INIT_Y_POS = -1.3f;
+	private float INIT_Y_POS = -1.7f;
 
 	private bool moveLeft;
 	private bool moveRight;
@@ -28,10 +28,10 @@ public class Monkey : MonoBehaviour {
 		Vector3 newPos = new Vector3(posX, transform.position.y, 0);
 
 		if (Input.GetKey (KeyCode.LeftArrow) && posX > MIN_POS) {
-			posX -= 0.05f;
+			posX -= 0.1f;
 		}
 		if (Input.GetKey (KeyCode.RightArrow) && posX < MAX_POS) {
-			posX += 0.05f;
+			posX += 0.1f;
 		}
 			
 		newPos = new Vector3(posX, calcY(posX) + INIT_Y_POS, 0);

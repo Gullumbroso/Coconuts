@@ -12,11 +12,9 @@ public class Coconut : MonoBehaviour {
 	public bool hitBananas = false;
 	public bool hitTurtle = false;
 	public bool disabled = false;
-	BoxCollider2D coll2d;
 
 	// Use this for initialization
 	void Awake () {
-		coll2d = GetComponent<BoxCollider2D> ();
 	}
 	
 	// Update is called once per frame
@@ -29,7 +27,8 @@ public class Coconut : MonoBehaviour {
 			hitTurtle = true;
 			gameObject.layer = BANANAS_LAYER;
 		}
-		if (collision.gameObject.name == "Bananas(Copy)") {
+		if (collision.gameObject.name == "Bananas(Clone)") {
+			Debug.Log ("Hit Banana!");
 			hitBananas = true;
 			disabled = true;
 			gameObject.layer = NONE_LAYER;

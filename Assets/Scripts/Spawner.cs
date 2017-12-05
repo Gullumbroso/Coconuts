@@ -6,8 +6,8 @@ public class Spawner : MonoBehaviour {
 
 	private int COCO_IDX = 0;
 	private int BANANAS_IDX = 1;
-	private float COCO_DROP_HEIGHT = 2.75f;
-	private float BANANAS_HEIGHT = 1.45f;
+	private float COCO_DROP_HEIGHT = 8.3f;
+	private float BANANAS_HEIGHT = 6.0f;
 	private int MAX_COCOS_SIMULT = 1;
 	private int MAX_BANANAS_SIMULT = 1;
 
@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour {
 	private int numOfCocos = 0;
 	private int numOfBananas = 0;
 	private float screenWidthRange;
-	private float prefabsOffset = 0.4f;
+	private float prefabsOffset = 3.0f;
 
 	void OnEnable() {
 		Bananas.OnBananasDestroy += bananasDestroyed;
@@ -66,7 +66,7 @@ public class Spawner : MonoBehaviour {
 	public void spawnCoconut() {
 		numOfCocos++;
 		bananas = GameObject.Find ("Bananas(Clone)");
-		BoxCollider2D bananasColl = bananas.GetComponent<BoxCollider2D> ();
+		PolygonCollider2D bananasColl = bananas.GetComponent<PolygonCollider2D> ();
 		float bananasSize = bananasColl.bounds.size.x;
 		float bananasPos = bananasColl.transform.position.x;
 

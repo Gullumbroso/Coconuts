@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Turtle : MonoBehaviour {
 
-	float MAX_ANGLE = 50.0f;
-	float MIN_ANGLE = -50.0f;
-	float MOVEMENT_OFFSET_DIV = -450f;
+	float MAX_ANGLE = 35.0f;
+	float MIN_ANGLE = -35.0f;
+	float MOVEMENT_OFFSET_DIV = -150f;
 	float MONKEY_ANGLE_OFFSET_DIV = 50f;
-	float MONKEY_HEIGHT = 0.33f;
+	float MONKEY_HEIGHT = 1.45f;
+	float MONKEY_X_OFFSET = 0.75f;
 
 	private float rotation = 0f;
 	public GameObject monkey;

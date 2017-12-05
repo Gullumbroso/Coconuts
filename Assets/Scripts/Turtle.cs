@@ -9,22 +9,42 @@ public class Turtle : MonoBehaviour {
 	float MOVEMENT_OFFSET_DIV = -150f;
 	float MONKEY_ANGLE_OFFSET_DIV = 50f;
 	float MONKEY_HEIGHT = 1.45f;
-	float MONKEY_X_OFFSET = 0.75f;
+	public float CONFUSION_TIMER = 10.0f;
+//	float MONKEY_X_OFFSET = 0.75f;
 
 	private float rotation = 0f;
+	private bool isConfused = false;
 	public GameObject monkey;
 	public Monkey monkeyScript;
+
+	private float confusionTimeLeft;
+	private bool timerActive = false;
 
 	// Use this for initialization
 	void Awake () {
 		monkey = GameObject.Find ("Monkey");
-	
+		confusionTimeLeft = CONFUSION_TIMER;
+	}
+
+	void OnEnable() {
+		RottenCoconut.OnRottenCocoHit += getConfused;
+	}
+
+	void OnDisable() {
+		RottenCoconut.OnRottenCocoHit -= getConfused;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		getInput ();
+
+		if (timerActive) {
+			confusionTimeLeft -= Time.deltaTime;
+			if ( confusionTimeLeft < 0 ) {
+				stopConfusion ();
+			}
+		}
 	}
 
 	void getInput() {
@@ -34,6 +54,10 @@ public class Turtle : MonoBehaviour {
 		}
 		if (Input.GetKey (KeyCode.D) && rotation > MIN_ANGLE) {
 			rotation -= 2.5f;
+		}
+
+		if (isConfused) {
+			rotation += Random.Range (-2.5f, 2.5f);
 		}
 
 		float monkeyAngle = monkey.transform.rotation.eulerAngles.z;
@@ -48,5 +72,21 @@ public class Turtle : MonoBehaviour {
 		transform.position = newPos;
 		float newRotation = rotation + monkeyAngle;
 		transform.rotation = Quaternion.Euler (0, 0, newRotation);
+	}
+
+	void getConfused() {
+		isConfused = true;
+		timerActive = true;
+		Debug.Log ("Started Confusion!");
+		Debug.Log (confusionTimeLeft);
+		// todo: Set confused animation
+	}
+
+	void stopConfusion() {
+		isConfused = false;
+		timerActive = false;
+		confusionTimeLeft = CONFUSION_TIMER;
+		Debug.Log ("Finished Confusion!");
+		// todo: Set regular turtle
 	}
 }

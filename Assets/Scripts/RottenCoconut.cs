@@ -2,16 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coconut : MonoBehaviour {
+public class RottenCoconut : MonoBehaviour {
 
-
-	public int TURTLE_LAYER = 8;
-	public int BANANAS_LAYER = 9;
-	public int NONE_LAYER = 10;
 	private float torqueMagnitude;
 	private AudioSource cocoSound;
 
-	public bool hitBananas = false;
+	public delegate void RottenCocoHit ();
+	public static event RottenCocoHit OnRottenCocoHit;
+
 	public bool hitTurtle = false;
 	public bool disabled = false;
 
@@ -22,18 +20,18 @@ public class Coconut : MonoBehaviour {
 		body2d = GetComponent<Rigidbody2D> ();
 		cocoSound = GetComponent<AudioSource> ();
 	}
-	
+
 	// Update is called once per frame
 	void Start () {
 		setNewTorque ();
 	}
 
 	void FixedUpdate() {
-		
+
 	}
 
 	void setNewTorque() {
-		torqueMagnitude = Random.Range (1500.0f, -1500.0f);
+		torqueMagnitude = Random.Range (500.0f, -500.0f);
 		body2d.AddTorque (torqueMagnitude * Time.deltaTime);
 	}
 
@@ -43,13 +41,11 @@ public class Coconut : MonoBehaviour {
 
 		if (collision.gameObject.name == "Turtle") {
 			hitTurtle = true;
-			gameObject.layer = BANANAS_LAYER;
 			cocoSound.Play();
-		}
-		if (collision.gameObject.name == "Bananas(Clone)") {
-			hitBananas = true;
-			disabled = true;
-			gameObject.layer = NONE_LAYER;
+			if (OnRottenCocoHit != null) {
+				OnRottenCocoHit ();
+			}
+			gameObject.layer = 10; // None Layer
 		}
 	}
 }

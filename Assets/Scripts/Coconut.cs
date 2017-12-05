@@ -7,6 +7,7 @@ public class Coconut : MonoBehaviour {
 
 	public int TURTLE_LAYER = 8;
 	public int BANANAS_LAYER = 9;
+	public int NONE_LAYER = 10;
 
 	public bool hitBananas = false;
 	public bool hitTurtle = false;
@@ -20,9 +21,6 @@ public class Coconut : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (disabled) {
-			Destroy (coll2d);
-		}
 	}
 
 	void OnCollisionEnter2D (Collision2D collision) {
@@ -34,7 +32,7 @@ public class Coconut : MonoBehaviour {
 		if (collision.gameObject.name == "Bananas(Copy)") {
 			hitBananas = true;
 			disabled = true;
-			Debug.Log ("Hit bananas!");
+			gameObject.layer = NONE_LAYER;
 		}
 	}
 }

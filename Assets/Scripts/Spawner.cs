@@ -10,7 +10,6 @@ public class Spawner : MonoBehaviour {
 	private float BANANAS_HEIGHT = 1.45f;
 	private int MAX_COCOS_SIMULT = 1;
 	private int MAX_BANANAS_SIMULT = 1;
-	private float COCO_DROP_MAX_DISTANCE_FROM_BANANAS = 1.5f;
 
 	public GameObject[] prefabs;
 	public bool active = true;
@@ -91,10 +90,8 @@ public class Spawner : MonoBehaviour {
 
 		int lotto = Random.Range (0, 2);
 		if (lotto == 0) {
-			Debug.Log (1);
 			return result1;
 		} else {
-			Debug.Log (2);
 			return result2;
 		}
 

@@ -1,0 +1,426 @@
+fileFormatVersion: 2
+guid: d065f7296cf9740c78ff03bff7c563d5
+timeCreated: 1512521139
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Turtle-Wakes Sprites_0
+    21300002: Turtle-Wakes Sprites_1
+    21300004: Turtle-Wakes Sprites_2
+    21300006: Turtle-Wakes Sprites_3
+    21300008: Turtle-Wakes Sprites_4
+    21300010: Turtle-Wakes Sprites_5
+    21300012: Turtle-Wakes Sprites_6
+    21300014: Turtle-Wakes Sprites_7
+    21300016: Turtle-Wakes Sprites_8
+    21300018: Turtle-Wakes Sprites_9
+    21300020: Turtle-Wakes Sprites_10
+    21300022: Turtle-Wakes Sprites_11
+    21300024: Turtle-Wakes Sprites_12
+    21300026: Turtle-Wakes Sprites_13
+    21300028: Turtle-Wakes Sprites_14
+    21300030: Turtle-Wakes Sprites_15
+    21300032: Turtle-Wakes Sprites_16
+    21300034: Turtle-Wakes Sprites_17
+    21300036: Turtle-Wakes Sprites_18
+    21300038: Turtle-Wakes Sprites_19
+    21300040: Turtle-Wakes Sprites_20
+    21300042: Turtle-Wakes Sprites_21
+    21300044: Turtle-Wakes Sprites_22
+    21300046: Turtle-Wakes Sprites_23
+    21300048: Turtle-Wakes Sprites_24
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1952
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1952
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1952
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1952
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1952
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1464
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1464
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 1464
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 1464
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 1464
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 976
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 976
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 976
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 976
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 976
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 488
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 488
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 488
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 488
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 488
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_21
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_22
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_23
+      rect:
+        serializedVersion: 2
+        x: 2100
+        y: 0
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle-Wakes Sprites_24
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 700
+        height: 488
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

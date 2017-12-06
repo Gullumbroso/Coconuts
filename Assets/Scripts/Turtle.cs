@@ -8,8 +8,9 @@ public class Turtle : MonoBehaviour {
 	float MIN_ANGLE = -35.0f;
 	float MOVEMENT_OFFSET_DIV = -150f;
 	float MONKEY_ANGLE_OFFSET_DIV = 50f;
-	float MONKEY_HEIGHT = 1.45f;
+	float MONKEY_HEIGHT = 1.75f;
 	public float CONFUSION_TIMER = 10.0f;
+	string SCARED_ANIMATION = "Scared";
 //	float MONKEY_X_OFFSET = 0.75f;
 
 	private float rotation = 0f;
@@ -17,12 +18,15 @@ public class Turtle : MonoBehaviour {
 	public GameObject monkey;
 	public Monkey monkeyScript;
 
+	Animator animator;
+
 	private float confusionTimeLeft;
 	private bool timerActive = false;
 
 	// Use this for initialization
 	void Awake () {
 		monkey = GameObject.Find ("Monkey");
+		animator = GetComponent<Animator> ();
 		confusionTimeLeft = CONFUSION_TIMER;
 	}
 
@@ -45,6 +49,8 @@ public class Turtle : MonoBehaviour {
 				stopConfusion ();
 			}
 		}
+
+		animator.SetBool("Scared", isConfused);
 	}
 
 	void getInput() {
@@ -77,16 +83,12 @@ public class Turtle : MonoBehaviour {
 	void getConfused() {
 		isConfused = true;
 		timerActive = true;
-		Debug.Log ("Started Confusion!");
-		Debug.Log (confusionTimeLeft);
-		// todo: Set confused animation
+		Debug.Log ("Scared!");
 	}
 
 	void stopConfusion() {
 		isConfused = false;
 		timerActive = false;
 		confusionTimeLeft = CONFUSION_TIMER;
-		Debug.Log ("Finished Confusion!");
-		// todo: Set regular turtle
 	}
 }

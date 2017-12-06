@@ -49,7 +49,7 @@ public class Coconut : MonoBehaviour {
 		if (collision.gameObject.name == "Bananas(Clone)") {
 			hitBananas = true;
 			disabled = true;
-			gameObject.layer = NONE_LAYER;
+			transform.localScale = new Vector3 (0, 0, 0);
 		}
 	}
 }

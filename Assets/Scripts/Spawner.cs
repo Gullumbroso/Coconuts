@@ -15,12 +15,20 @@ public class Spawner : MonoBehaviour {
 	public GameObject[] prefabs;
 	public bool active = true;
 
+	public GameObject gameManager;
+	public GameManager manager;
 	public GameObject bananas;
 
 	private int numOfCocos = 0;
 	private int numOfBananas = 0;
 	private float screenWidthRange;
 	private float prefabsOffset = 3.0f;
+
+
+	void Awake() {
+		gameManager = GameObject.Find ("GameManager");
+		manager = gameManager.GetComponent<GameManager> ();
+	}
 
 	void OnEnable() {
 		Bananas.OnBananasDestroy += bananasDestroyed;
@@ -35,18 +43,19 @@ public class Spawner : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		screenWidthRange = Camera.main.orthographicSize * Camera.main.aspect;
-		spawnBananas ();
-		spawnCoconut ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (numOfBananas < MAX_BANANAS_SIMULT) {
-			spawnBananas ();
+
+		if (manager.playing) {
+			if (numOfBananas < MAX_BANANAS_SIMULT) {
+				spawnBananas ();
+			}
+			if (numOfCocos < MAX_COCOS_SIMULT && numOfBananas > 0) {
+				spawnCoconut ();
+			} 
 		}
-		if (numOfCocos < MAX_COCOS_SIMULT && numOfBananas > 0) {
-			spawnCoconut ();
-		} 
 	}
 
 	public void bananasDestroyed() {

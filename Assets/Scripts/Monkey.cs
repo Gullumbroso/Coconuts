@@ -10,7 +10,6 @@ public class Monkey : MonoBehaviour {
 	Animator animator;
 
 	private int standingBoolAnimParamId;
-	private int walkingBoolAnimParamId;
 
 	[Header("Animation")]
 	[SerializeField] string standingBoolAnimParamName;
@@ -32,7 +31,6 @@ public class Monkey : MonoBehaviour {
 	void Start () {
 		animator = GetComponent<Animator> ();
 		standingBoolAnimParamId = Animator.StringToHash(standingBoolAnimParamName);
-		walkingBoolAnimParamId = Animator.StringToHash(walkingBoolAnimParamName);
 	}
 	
 	// Update is called once per frame

@@ -10,7 +10,6 @@ public class Turtle : MonoBehaviour {
 	float MONKEY_ANGLE_OFFSET_DIV = 50f;
 	float MONKEY_HEIGHT = 1.75f;
 	public float CONFUSION_TIMER = 10.0f;
-	string SCARED_ANIMATION = "Scared";
 //	float MONKEY_X_OFFSET = 0.75f;
 
 	private float rotation = 0f;

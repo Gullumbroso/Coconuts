@@ -8,11 +8,12 @@ public class Bananas : MonoBehaviour {
 	public delegate void BananasDestroyed ();
 	public static event BananasDestroyed OnBananasDestroy;
 
-	float DESTROY_TIMER = 2.0f;
+	float DESTROY_TIMER = 2.4f;
 
 	Animator animator;
 	Rigidbody2D body2d;
 	AudioSource[] sounds;
+	SpriteRenderer sprite;
 
 	bool destroy = false;
 	float destroyTimer;
@@ -22,6 +23,7 @@ public class Bananas : MonoBehaviour {
 		animator = GetComponent<Animator> ();
 		body2d = GetComponent<Rigidbody2D> ();
 		sounds = GetComponents<AudioSource> ();
+		sprite = GetComponent<SpriteRenderer> ();
 		destroyTimer = 0;
 	}
 
@@ -29,8 +31,14 @@ public class Bananas : MonoBehaviour {
 	void Update () {
 		if (destroy) {
 			destroyTimer -= Time.deltaTime;
-			if ( destroyTimer < 0 ) {
+			if (destroyTimer < 0) {
 				Destroy (gameObject);
+			} else if (destroyTimer < DESTROY_TIMER / 2.0f && sprite != null) {
+				if (OnBananasDestroy != null) {
+					OnBananasDestroy ();
+				}
+				Destroy (sprite);
+				sprite = null;
 			}
 		}
 	}
@@ -42,9 +50,7 @@ public class Bananas : MonoBehaviour {
 	void destroyBananas() {
 		sounds [1].Play ();
 		Destroy (body2d);
-		if (OnBananasDestroy != null) {
-			OnBananasDestroy ();
-		}
+		gameObject.layer = 10; // None
 		Vector3 pos = transform.position;
 		transform.position = new Vector3 (pos.x + 0.65f, pos.y - 6.0f);
 		animator.SetTrigger ("Explode");
